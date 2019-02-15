@@ -3,7 +3,7 @@
 # successful
 def main():
     # when you have initialized your object, use the calls below to test
-    #run_test_init()
+    run_test_init()
     run_test_withdraw()
     return
 
