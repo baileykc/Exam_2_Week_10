@@ -108,6 +108,10 @@ def run_test_init():
     # ---------------------------------------------------------------------
     # TODO: 2. Add two more test cases for your Bank class below.
     # ---------------------------------------------------------------------
+    #Test 1
+
+    #Test 2
+
 
 # ---------------------------------------------------------------------
 # TODO: 3. Implement your test for the withdraw method below
