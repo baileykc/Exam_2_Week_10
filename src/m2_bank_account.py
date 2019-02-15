@@ -3,8 +3,8 @@
 # successful
 def main():
     # when you have initialized your object, use the calls below to test
-    run_test_init()
-    #run_test_withdraw()
+    #run_test_init()
+    run_test_withdraw()
     return
 
 
@@ -50,10 +50,10 @@ class Bank(object):
     # Done: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
     # ---------------------------------------------------------------------
-    def __init__(b1, name, initial_deposit, account_number):
-        b1.name = name
-        b1.balance = initial_deposit
-        b1.account_number = account_number
+    def __init__(b2, name, initial_deposit, account_number):
+        b2.name = name
+        b2.balance = initial_deposit
+        b2.account_number = account_number
 
 
     def withdraw(self, amount):
@@ -88,7 +88,9 @@ class Bank(object):
     #   Put your code for withdraw below
     #
     # ---------------------------------------------------------------------
-
+    def withdraw(b2, amount):
+        withdraw = b2.intial - amount
+        return withdraw
 
 def run_test_init():
     """ Tests the   __init__   method of the Bank class. """
@@ -149,6 +151,20 @@ def run_test_init():
 def run_test_withdraw():
 # Implement at least two tests.  Use copy and paste to speed your coding.
 
+# Test 1:  Contents fit in the Box easily.
+    b1 = Bank('Adam', 113, 'A3')
+    expected_name = 'Adam'
+    expected_balance = 113
+    expected_account_number = 'A3'
+    print("Expected:", expected_name, expected_balance, expected_account_number)
+    print("Actual:  ", b1.name, b1.balance, b1.account_number)
+    if (expected_name == b1.name) and (expected_balance == b1.balance) and (
+            expected_account_number == b1.account_number):
+        print("Test passed SUCCESSFULLY!")
+    else:
+        print_failure_message()
+    print()
+
     pass
 
 
@@ -160,3 +176,7 @@ def print_failure_message():
 # Calls  main  to start the ball rolling.
 # ------------------------------------------------------------------------
 main()
+
+#I am struggling with this test function. I know tha you need to recode the test. Coding the test to have an amount
+#(intial amount) and then have that subratced but the integer that the person wants to with draw.
+#the test will pass if the expected meets the actual as long as the amount withdrawn is not greater than the intial amount
