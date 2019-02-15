@@ -154,6 +154,12 @@ def draw_a_picture(point, n, color, window):
     line5.attach_to(window)
     line5.color = 'green'
     line2.color = 'green'
+    line6 = rg.Line(rg.Point(325, 310),rg.Point(350, 350))
+    line6.attach_to(window)
+    line6.color = 'orange'
+    line7 = rg.Line(rg.Point(375, 310), rg.Point(350, 350))
+    line7.attach_to(window)
+    line7.color = 'orange'
     window.render()
     pass
 
@@ -161,4 +167,5 @@ def draw_a_picture(point, n, color, window):
 main()
 
 #I know it is not right, I felt like there needed to be a "k in range" for the lines because there was so many.
-#As far as the oragne prime numbers, I think that you would do a count or something like that.
+#As far as the oragne prime numbers I would implement the is prime function for n = 10. This would tell me which need to
+#prime.
