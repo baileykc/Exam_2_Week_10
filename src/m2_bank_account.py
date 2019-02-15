@@ -3,7 +3,7 @@
 # successful
 def main():
     # when you have initialized your object, use the calls below to test
-    #run_test_init()
+    run_test_init()
     #run_test_withdraw()
     return
 
@@ -50,6 +50,9 @@ class Bank(object):
     # TODO: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
     # ---------------------------------------------------------------------
+    self.name = killian
+    self.id = 10
+    self.an = A2
 
 
     def withdraw(self, amount):
@@ -108,9 +111,35 @@ def run_test_init():
     # ---------------------------------------------------------------------
     # TODO: 2. Add two more test cases for your Bank class below.
     # ---------------------------------------------------------------------
-    #Test 1
 
-    #Test 2
+    # Test 2:  Contents fit in the Box easily.
+    b1 = Bank('killian', 10, 'A2')
+    expected_name = 'killian'
+    expected_balance = 10
+    expected_account_number = 'A2'
+    print("Expected:", expected_name, expected_balance, expected_account_number)
+    print("Actual:  ", b1.name, b1.balance, b1.account_number)
+    if (expected_name == b1.name) and (expected_balance == b1.balance) and (
+            expected_account_number == b1.account_number):
+        print("Test passed SUCCESSFULLY!")
+    else:
+        print_failure_message()
+    print()
+
+
+    # Test 3:  Contents fit in the Box easily.
+    b1 = Bank('Adam', 113, 'A3')
+    expected_name = 'Adam'
+    expected_balance = 113
+    expected_account_number = 'A3'
+    print("Expected:", expected_name, expected_balance, expected_account_number)
+    print("Actual:  ", b1.name, b1.balance, b1.account_number)
+    if (expected_name == b1.name) and (expected_balance == b1.balance) and (
+            expected_account_number == b1.account_number):
+        print("Test passed SUCCESSFULLY!")
+    else:
+        print_failure_message()
+    print()
 
 
 # ---------------------------------------------------------------------
@@ -118,6 +147,7 @@ def run_test_init():
 # ---------------------------------------------------------------------
 def run_test_withdraw():
 # Implement at least two tests.  Use copy and paste to speed your coding.
+
     pass
 
 
