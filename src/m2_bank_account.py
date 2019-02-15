@@ -47,12 +47,13 @@ class Bank(object):
           :type account_number: str
         """
     # ---------------------------------------------------------------------
-    # TODO: 1. Implement and test instances of this class.
+    # Done: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
     # ---------------------------------------------------------------------
-    self.name = killian
-    self.id = 10
-    self.an = A2
+    def __init__(b1, name, initial_deposit, account_number):
+        b1.name = name
+        b1.balance = initial_deposit
+        b1.account_number = account_number
 
 
     def withdraw(self, amount):
@@ -109,7 +110,7 @@ def run_test_init():
         print_failure_message()
     print()
     # ---------------------------------------------------------------------
-    # TODO: 2. Add two more test cases for your Bank class below.
+    # Done: 2. Add two more test cases for your Bank class below.
     # ---------------------------------------------------------------------
 
     # Test 2:  Contents fit in the Box easily.

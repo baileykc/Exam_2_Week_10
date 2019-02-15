@@ -159,3 +159,6 @@ def draw_a_picture(point, n, color, window):
 
 
 main()
+
+#I know it is not right, I felt like there needed to be a "k in range" for the lines because there was so many.
+#As far as the oragne prime numbers, I think that you would do a count or something like that.
