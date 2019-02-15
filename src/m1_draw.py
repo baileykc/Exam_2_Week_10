@@ -127,6 +127,8 @@ def is_prime(n):
 #
 #
 #
+
+
 def draw_a_picture(point, n, color, window):
     circle1 = rg.Circle(rg.Point(150, 150), 100)
     circle1.attach_to(window)
@@ -136,7 +138,23 @@ def draw_a_picture(point, n, color, window):
     rectangle1.attach_to(window)
     rectangle2 = rg.Rectangle(rg.Point(430, 390), rg.Point(270, 310))
     rectangle2.attach_to(window)
-    window.render(0.5)
+    line = rg.Line(rg.Point(rectangle1.get_upper_right_corner().x, rectangle1.get_upper_right_corner().y),
+    rg.Point(150, 150))
+    line.attach_to(window)
+    line.color = 'blue'
+    line3 = rg.Line(rg.Point(rectangle1.get_upper_left_corner().x, rectangle1.get_upper_left_corner().y),
+                   rg.Point(150, 150))
+    line3.attach_to(window)
+    line3.color = 'blue'
+    line2 = rg.Line(rg.Point(rectangle2.get_upper_right_corner().x, rectangle2.get_upper_right_corner().y),
+    rg.Point(350, 350))
+    line2.attach_to(window)
+    line5 = rg.Line(rg.Point(rectangle2.get_upper_left_corner().x, rectangle2.get_upper_left_corner().y),
+    rg.Point(350, 350))
+    line5.attach_to(window)
+    line5.color = 'green'
+    line2.color = 'green'
+    window.render()
     pass
 
 
