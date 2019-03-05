@@ -50,10 +50,10 @@ class Bank(object):
     # Done: 1. Implement and test instances of this class.
     #     See the testing code (scroll down near bottom) for more examples.
     # ---------------------------------------------------------------------
-    def __init__(b2, name, initial_deposit, account_number):
-        b2.name = name
-        b2.balance = initial_deposit
-        b2.account_number = account_number
+    def __init__(self, name, initial_deposit, account_number):
+        self.name = name
+        self.balance = initial_deposit
+        self.account_number = account_number
 
 
     def withdraw(self, amount):
@@ -88,9 +88,10 @@ class Bank(object):
     #   Put your code for withdraw below
     #
     # ---------------------------------------------------------------------
-    def withdraw(b2, amount):
-        withdraw = b2.intial - amount
-        return withdraw
+        if amount > self.balance:
+            return 'not enough money'
+        self.balance = self.balance - amount
+        return self.balance
 
 def run_test_init():
     """ Tests the   __init__   method of the Bank class. """
@@ -149,27 +150,14 @@ def run_test_init():
 # TODO: 3. Implement your test for the withdraw method below
 # ---------------------------------------------------------------------
 def run_test_withdraw():
-# Implement at least two tests.  Use copy and paste to speed your coding.
-
-# Test 1:  Contents fit in the Box easily.
-    b1 = Bank('Adam', 113, 'A3')
-    expected_name = 'Adam'
-    expected_balance = 113
-    expected_account_number = 'A3'
-    print("Expected:", expected_name, expected_balance, expected_account_number)
-    print("Actual:  ", b1.name, b1.balance, b1.account_number)
-    if (expected_name == b1.name) and (expected_balance == b1.balance) and (
-            expected_account_number == b1.account_number):
-        print("Test passed SUCCESSFULLY!")
-    else:
-        print_failure_message()
-    print()
-
-    pass
-
-
-def print_failure_message():
-    print('  *** FAILED the above test. ***')
+    b4 = Bank('Killian', 100, 'D1')
+    amount = 10
+    expected_balance = 100 - amount
+    actual_balance = b4.withdraw(amount)
+    if expected_balance == actual_balance:
+        print('Hooray')
+    if b4.withdraw(amount) == 'not enough money':
+        print('not enough money')
 
 
 # -----------------------------------------------------------------------------
